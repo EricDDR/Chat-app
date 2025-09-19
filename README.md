@@ -1,1 +1,121 @@
-# Chat-app
+# 📱 Chat App em React Native com Expo
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Protótipo funcional de um aplicativo de chat multiplataforma (iOS/Android) desenvolvido com React Native e Expo. O projeto demonstra a criação de uma interface de chat moderna, navegação entre telas, gerenciamento de estado global e comunicação com uma API backend.
+
+## ✨ Visão Geral
+
+O aplicativo permite que o usuário se identifique com um nome, entre em uma sala de chat, envie e receba mensagens em tempo real (simulado via polling), e customize a aparência do app com um tema claro e escuro.
+
+### 🎥 Demonstração
+
+*(Dica: Grave um GIF da tela do seu app e adicione aqui para uma ótima primeira impressão!)*
+
+![GIF do App em Ação](URL_DO_SEU_GIF_AQUI)
+
+| Tela de Início | Chat (Tema Claro) | Chat (Tema Escuro) | Configurações |
+| :---: |:---:|:---:|:---:|
+| ![Tela de Início](URL_DA_IMAGEM_HOME_AQUI) | ![Chat Claro](URL_DA_IMAGEM_CHAT_CLARO_AQUI) | ![Chat Escuro](URL_DA_IMAGEM_CHAT_ESCURO_AQUI) | ![Configurações](URL_DA_IMAGEM_SETTINGS_AQUI) |
+
+## ✅ Funcionalidades Implementadas
+
+-   **Navegação Multi-telas:** Navegação em pilha (Stack) entre as telas de Início, Chat e Configurações, utilizando **Expo Router**.
+-   **Identificação de Usuário:** Tela inicial para o usuário inserir seu nome antes de entrar no chat.
+-   **Chat Funcional:**
+    -   Exibição de mensagens em uma `FlatList` otimizada.
+    -   Diferenciação visual para mensagens enviadas e recebidas.
+    -   Atualização automática de mensagens a cada 3 segundos (polling).
+-   **UI Otimista:** Mensagens enviadas aparecem instantaneamente na tela para uma melhor experiência do usuário.
+-   **Gerenciamento de Estado Global:** Controle de tema (Claro/Escuro) implementado com a **Context API** do React, garantindo consistência em todo o app.
+-   **Ações de Mensagem:** Suporte para deletar mensagens (com diálogo de confirmação).
+-   **Layout Responsivo:** A interface se adapta à aparição do teclado com `KeyboardAvoidingView`.
+
+## 🛠️ Tecnologias Utilizadas
+
+-   **[React Native](https://reactnative.dev/)**: Framework para desenvolvimento de apps nativos.
+-   **[Expo](https://expo.dev/)**: Plataforma e conjunto de ferramentas para facilitar o desenvolvimento React Native.
+-   **[Expo Router](https://docs.expo.dev/router/introduction/)**: Sistema de navegação baseado em arquivos para criar rotas nativas.
+-   **[TypeScript](https://www.typescriptlang.org/)**: Superset do JavaScript que adiciona tipagem estática.
+-   **React Hooks**: Utilização de `useState`, `useEffect`, `useCallback`, `useRef` e `useContext`.
+-   **Flexbox**: Para criação de layouts flexíveis.
+
+## 🚀 Como Rodar o Projeto
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina:
+-   [Node.js](https://nodejs.org/en/)
+-   [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+-   [Expo CLI](https://docs.expo.dev/get-started/installation/) (`npm install -g expo-cli`)
+-   O app **Expo Go** no seu celular (iOS ou Android) para testar.
+
+### Passo a Passo
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    ```
+
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd seu-repositorio
+    ```
+
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+    *ou*
+    ```bash
+    yarn
+    ```
+
+4.  **Backend (Importante):**
+    Este projeto precisa de uma API backend simples para funcionar. Certifique-se de que o servidor local esteja rodando e atualize o endereço `API_URL_BASE` no arquivo `app/chat.tsx` para o IP da sua máquina na rede local.
+    ```javascript
+    // Exemplo em app/chat.tsx
+    const API_URL_BASE = '[http://192.168.0.105:8080/messages](http://192.168.0.105:8080/messages)'; 
+    ```
+
+5.  **Inicie o projeto:**
+    ```bash
+    npx expo start
+    ```
+
+6.  **Conecte com seu celular:**
+    Após o comando acima, um QR Code aparecerá no terminal. Abra o app Expo Go no seu celular e escaneie o QR Code para carregar o aplicativo.
+
+## 📁 Estrutura de Pastas
+
+O projeto utiliza a estrutura de rotas do Expo Router, onde a organização dos arquivos no diretório `app` define a navegação.
+
+```
+/
+|-- app/
+|   |-- context/
+|   |   |-- ThemeContext.tsx   # Contexto global para o tema
+|   |-- _layout.tsx            # Layout principal (Stack Navigator)
+|   |-- index.tsx              # Tela de início (rota "/")
+|   |-- chat.tsx               # Tela de chat (rota "/chat")
+|   |-- settings.tsx           # Tela de configurações (rota "/settings")
+|-- assets/                    # Imagens, fontes, etc.
+|-- components/                # Componentes reutilizáveis (se necessário)
+`-- ...
+```
+
+## 📈 Possíveis Melhorias
+
+-   [ ] Substituir o polling por **WebSockets** para uma comunicação em tempo real mais eficiente.
+-   [ ] Adicionar funcionalidade de envio de imagens.
+-   [ ] Implementar um sistema de autenticação de usuários.
+-   [ ] Adicionar indicador de "usuário está digitando...".
+-   [ ] Paginação/Scroll infinito para carregar mensagens mais antigas.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Desenvolvido por **[Seu Nome]**.
