@@ -29,14 +29,6 @@ O aplicativo permite que o usuário se identifique com um nome, entre em uma sal
 
 ## 🚀 Como Rodar o Projeto
 
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina:
--   [Node.js](https://nodejs.org/en/)
--   [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
--   [Expo CLI](https://docs.expo.dev/get-started/installation/) (`npm install -g expo-cli`)
--   O app **Expo Go** no seu celular (iOS ou Android) para testar.
-
 ### Passo a Passo
 
 1.  **Clone o repositório:**
@@ -61,7 +53,6 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 4.  **Backend (Importante):**
     Este projeto precisa de uma API backend simples para funcionar. Certifique-se de que o servidor local esteja rodando e atualize o endereço `API_URL_BASE` no arquivo `app/chat.tsx` para o IP da sua máquina na rede local.
     ```javascript
-    // Exemplo em app/chat.tsx
     const API_URL_BASE = '[http://192.168.0.105:8080/messages](http://192.168.0.105:8080/messages)'; 
     ```
 
@@ -91,18 +82,3 @@ O projeto utiliza a estrutura de rotas do Expo Router, onde a organização dos 
 `-- ...
 ```
 
-## 📈 Possíveis Melhorias
-
--   [ ] Substituir o polling por **WebSockets** para uma comunicação em tempo real mais eficiente.
--   [ ] Adicionar funcionalidade de envio de imagens.
--   [ ] Implementar um sistema de autenticação de usuários.
--   [ ] Adicionar indicador de "usuário está digitando...".
--   [ ] Paginação/Scroll infinito para carregar mensagens mais antigas.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
----
-
-Desenvolvido por **[Seu Nome]**.
