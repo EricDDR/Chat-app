@@ -1,22 +1,9 @@
 # 📱 Chat App em React Native com Expo
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 Protótipo funcional de um aplicativo de chat multiplataforma (iOS/Android) desenvolvido com React Native e Expo. O projeto demonstra a criação de uma interface de chat moderna, navegação entre telas, gerenciamento de estado global e comunicação com uma API backend.
 
 ## ✨ Visão Geral
 
 O aplicativo permite que o usuário se identifique com um nome, entre em uma sala de chat, envie e receba mensagens em tempo real (simulado via polling), e customize a aparência do app com um tema claro e escuro.
-
-### 🎥 Demonstração
-
-*(Dica: Grave um GIF da tela do seu app e adicione aqui para uma ótima primeira impressão!)*
-
-![GIF do App em Ação](URL_DO_SEU_GIF_AQUI)
-
-| Tela de Início | Chat (Tema Claro) | Chat (Tema Escuro) | Configurações |
-| :---: |:---:|:---:|:---:|
-| ![Tela de Início](URL_DA_IMAGEM_HOME_AQUI) | ![Chat Claro](URL_DA_IMAGEM_CHAT_CLARO_AQUI) | ![Chat Escuro](URL_DA_IMAGEM_CHAT_ESCURO_AQUI) | ![Configurações](URL_DA_IMAGEM_SETTINGS_AQUI) |
 
 ## ✅ Funcionalidades Implementadas
 
